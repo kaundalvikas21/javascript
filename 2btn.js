@@ -1,5 +1,5 @@
 var btn1 =document.querySelector('.red');
-var btn2 =document.querySelector('.blue');
+var btn2 =document.querySelector('.green');
 
 btn1.addEventListener('click', function(){
     btn1.style.backgroundColor = 'red';
