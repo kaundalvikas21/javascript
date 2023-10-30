@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>My innerHTML</h1>
+    <!-- Print the current window page -->
+    <button onclick="window.print()">Print this Page</button>
+
+    <p id="demo"></p>
+    
+    <script>
+        document.getElementById('demo').innerHTML = 10+20; // Using innerHTML
+
+        document.write(30+10); // Using document.write() //The document.write() method should only be used for testing.
+        
+        window.alert(5+10); // Using window.alert()  You can skip the window keyword.
+
+        alert(6+6); // slip window keyword.
+
+        console.log(20+5);
+
+
+    </script>
+</body>
+</html>
