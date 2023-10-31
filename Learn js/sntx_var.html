@@ -20,7 +20,10 @@
     <p id="string"></p>
 
     <p id="num6"></p>
-   
+
+    <p id="first"></p>
+    <p id="second"></p>
+    <p id="third"></p>
 
     <script>
       let x; //Assign the value num1
@@ -41,7 +44,24 @@
       B = A - 2;
       document.getElementById("num6").innerHTML = B;
 
-   
+
+      // DIFFERENCE b/w let , var & const variables.
+
+      let first = 10; // Let is better becoz it throws error if the same variable declared twice. 
+      // let first = 15; // cannot be Re-declared let variable name. Only Re-assign values to variable.
+      first = 1;
+      document.getElementById('first').innerHTML = first;
+
+
+      var second = 10; // var declared with same variable name twice 
+      var second = 5; // its called Re-declared variable. (we can get only 2nd Override-value Ignore the 1st)
+      second = 20; //Re-assign value . This is also OVERRIDE. 
+      document.getElementById('second').innerHTML = second;
+
+      const third = 5; // only once declared/assigned value. Its called constant.
+      // third = 10; // cannot be Re-assign value & Re-declared variable names.
+      document.getElementById('third').innerHTML = third;
+
     </script>
   </body>
 </html>
