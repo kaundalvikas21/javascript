@@ -26,27 +26,97 @@
       //     document.write("X is smaller");
       //   }
 
-    //   let name = "john";
-    //   let gender = "Male";
-      
-    //   if(gender == 'Male'){
-    //     document.write('hey Mr. ' + name);
-    //   }else{
-    //     document.write('hey Miss. ' + name);
-    //   }
+      //   let name = "john";
+      //   let gender = "Male";
 
-    //IF ELSE IF STATEMENT:
-    const time = new Date().getHours();
-    let greeting;
-    if(time < 10){
-        greeting = "good morning";
-    }else if(time < 20){
-        greeting = "good evening";
-    } else {
-        greeting = "good night";
-    }
-    document.getElementById('demo').innerHTML = greeting;
+      //   if(gender == 'Male'){
+      //     document.write('hey Mr. ' + name);
+      //   }else{
+      //     document.write('hey Miss. ' + name);
+      //   }
 
+      //IF ELSE IF STATEMENT:
+      // const time = new Date().getHours();
+      // let greeting;
+      // if(time < 12){
+      //     greeting = "good morning";
+      // }else if(time < 20){
+      //     greeting = "good evening";
+      // } else {
+      //     greeting = "good night";
+      // }
+      // document.getElementById('demo').innerHTML = greeting;
+
+      // let per = 85;
+      // if(per >= 80 && per <= 100){
+      //   document.write("You are in Merit.");
+      // }
+      // else if(per >= 60 && per < 80){
+      //   document.write("You are in Ist Division.");
+      // }
+      // else if(per >= 50 && per < 60){
+      //   document.write("You are in IInd Division.");
+      // }
+      // else if(per >= 45 && per < 50){
+      //   document.write("You are in IIIrd Division.");
+      // }
+      // else if(per >= 33 && per < 40){
+      //   document.write("You are Fail");
+      // }else{
+      //   document.write("Please Enter Valid Percentage!");
+      // }
+
+      //SWITCH STATEMENT:
+      //  let day = 5;
+
+      //     switch(day){
+      //       case 0:
+      //         document.write('Today is Monday');
+      //       break;
+
+      //       case 1:
+      //       document.write('Today is Tuesday');
+      //       break;
+
+      //       case 2:
+      //       document.write('Today is Wednesday');
+      //       break;
+
+      //       case 3:
+      //       document.write('Today is Thursday');
+      //       break;
+
+      //       case 4:
+      //       document.write('Today is Friday');
+      //       break;
+
+      //       case 5:
+      //       document.write('Today is Saturday');
+      //       break;
+
+      //       case 6:
+      //       document.write('Today is Sunday');
+      //       break;
+
+      //       default:
+      //       document.write('Enter the Valid Day');
+      //     }
+
+      //Another Example:(using comparison operator with logical AND operator)
+      let age = 18;
+
+      switch (true) {
+        case age >= 15 && age <= 20:
+          document.write("you are eligible");
+          break;
+
+        case age >= 21 && age <= 30:
+          document.write("you are Not eligible");
+          break;
+
+        default:
+          document.write("Please Enter Valid Age");
+      }
     </script>
   </body>
 </html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ternary operator</title>
+  </head>
+  <body>
+    <script>
+      //EXAMPLE:- (1)
+      // let  x = 20;
+      // let z;
+      // (x > 100) ? z = 'True' : z = 'False';
+      // document.write(z);
+
+      //EXAMPLE:- (2)
+      // let a = 100;
+      // let b;
+      // b = (!(a == 500)) ? "True" : "False"; //Use logical NOT operator. (TRUE convert FALSE and vice-versa.)
+      // document.write(b);
+
+      //EXAMPLE:- (3)
+      //   let x = 50;
+      //   let y;
+      //   y = (x == 50) ? "Equal" : "Not Equal"; //Short Method.
+      //   document.write(y);
+      //   console.log(y);
+
+      //EXAMPLE:- (4)
+      // let a = 50;
+      //   let b;
+      //   b = "Value is " + (a > 80 ? "Equal" : "Not Equal");
+      //   document.write(b);
+
+      //EXAMPLE:- (5)
+      let x = 10; //false (10 > 50)
+      let y = 90; //true (90 < 100)
+      z = x > 50 || y < 100 ? "true" : "false"; //Use logical OR Operator. (one condition must be TRUE)
+      document.write(z);
+    </script>
+  </body>
+</html>
