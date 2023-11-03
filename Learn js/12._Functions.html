@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Functions</title>
+  </head>
+  <p id="demo1"></p>
+  <p id="demo2"></p>
+  <body>
+    <script>
+
+      //CREATE A SIMPLE FUNCTION AND CALL ITS AGAIN.
+      function vik() {
+        document.write("hey my first function in JS.<br>");
+      }
+      function hey() {
+        document.write("My second function in js.<br>");
+      }
+      vik(); //CREATE 1st FUNCTION.
+      hey(); //CREATE 2nd FUNCTION.
+      vik();
+      hey();
+      document.write("call a function multiple times.<br>"); //This is display text b/w our function call.
+      vik();
+
+      //   (1st EXAMPLE) create function product of p1 * p2.
+
+      function myFunction(p1, p2) {
+        // document.write(p1 * p2);
+        return p1 * p2;
+      }
+
+      let result = myFunction(5, 10);
+      document.getElementById("demo1").innerHTML = result;
+
+      //SAME EXAMPLE(1st) BUT FUNCTION DECLARATION IS AFTER THE VARIABLE DECLARED.
+      let x = myFunction(5, 4);
+      document.getElementById("demo2").innerHTML = x;
+
+      function myFunction(a, b) {
+        return a * b;
+      }
+      
+    </script>
+  </body>
+</html>
