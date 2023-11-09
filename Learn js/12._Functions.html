@@ -5,9 +5,11 @@
   </head>
   <p id="demo1"></p>
   <p id="demo2"></p>
+  <p id="celsius"></p>
+  <p id="demo3"></p>
+  <p id="demo4"></p>
   <body>
     <script>
-
       //CREATE A SIMPLE FUNCTION AND CALL ITS AGAIN.
       function vik() {
         document.write("hey my first function in JS.<br>");
@@ -15,31 +17,115 @@
       function hey() {
         document.write("My second function in js.<br>");
       }
-      vik(); //CREATE 1st FUNCTION.
-      hey(); //CREATE 2nd FUNCTION.
+      vik(); //CREATE 1st FUNCTION.(CALL HERE)
+      hey(); //CREATE 2nd FUNCTION. (CALL HERE)
       vik();
       hey();
-      document.write("call a function multiple times.<br>"); //This is display text b/w our function call.
       vik();
+      document.write("CALL A FUNCTION MULTIPLE TIMES.<br>"); //Here display text b/w our function call.
+      
+
 
       //   (1st EXAMPLE) create function product of p1 * p2.
 
-      function myFunction(p1, p2) {
+      function myFunction1(p1, p2) {
         // document.write(p1 * p2);
         return p1 * p2;
       }
 
-      let result = myFunction(5, 10);
+      let result = myFunction1(5, 10);
       document.getElementById("demo1").innerHTML = result;
 
       //SAME EXAMPLE(1st) BUT FUNCTION DECLARATION IS AFTER THE VARIABLE DECLARED.
-      let x = myFunction(5, 4);
+      let x = myFunction2(5, 4);
       document.getElementById("demo2").innerHTML = x;
 
-      function myFunction(a, b) {
+      function myFunction2(a, b) {
         return a * b;
       }
+
+
+
+      //function that converts from Fahrenheit to Celsius:
+      function toCelsius(f) {
+        return (5 / 9) * (f - 32);
+      }
+      let value =  "The temperature is " + toCelsius(50) + " Celsius.";
+      document.getElementById("celsius").innerHTML = value;
+
+
+
+      //EXAMPLE OF LOCAL VARIABLE:
+      let text = "outside:" + typeof carName;
+      document.getElementById('demo3').innerHTML = text; //OUTPUT: outside:undefined 
+
+      function myFunction3(){  //OUTPUT: inside:string volvo
+
+        let carName = 'volvo';
+        let text = 'inside:' + typeof carName + ' ' + carName;
+        document.getElementById('demo4').innerHTML = text;
+        
+      }
+      myFunction3();
       
+
+      //2ND EXAMPLE: LOCAL VARIABLE:
+      
+      function myLocal(){
+        var hi = "RAGNAAR"; //(ONLY WORKS ON INSIDE THE LOCAL FUNCTION)
+        document.write(hi+ "<br>");
+      }
+      myLocal(); //THIS IS CALL LOCAL VARIABLE FUNCTION.
+      
+
+    
+
+      //FUNCTION WITH PARAMETER:
+      function myName(fname, lname){
+      document.write("Hey " + fname + " " +lname +"<br>");
+      }
+
+      function sum(a,b){
+      document.write(a+b);
+      }
+      document.write("<br>");
+      myName("Ryan", "Gosling.");
+      sum(10,50);
+      document.write("<br>")
+      myName("Jack", "Sparrow.");
+      sum(50,50);
+      document.write("<br>");
+
+
+      //FUNCTION WITH RETURN VALUE:
+      function sum2(eng,math,sc){
+        var s = eng + math + sc;
+        return s;
+      }
+
+      //create 2nd function to calculate a PERCENTAGE.
+      function percentage(tt){
+        var per= tt/300 * 100;
+        document.write(per);
+      }
+
+
+      let total= sum2(80, 80, 90);
+      // document.write(total);
+      percentage(total);
+      document.write("<br>");
+
+
+      //2nd example FUNCTION WITH RETURN VALUE:
+
+      function fullName(fname, lname){
+        var a =  fname + " " + lname + "<br>";
+        return a;
+      }
+     var fn = fullName("Raju", "Pandey");
+     document.write(fn);
+
+
     </script>
   </body>
 </html>

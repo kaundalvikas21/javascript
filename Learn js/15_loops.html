@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loops</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+
+      /* 1. WHILE LOOP: */
+
+      //   let a = 0;
+      //   while(a <= 10){
+      //       document.write(a + ") "+ "Hello While <br>"); //OUTPUT : 0 UPTO 10 WITH HELLO WHILE.
+      //       a++; // a = a+1; (ANYONE USE SAME WORK)
+
+      //   }
+
+
+      /*  2. DO-WHILE LOOP: */
+      //   let a = 1;
+      //   do{
+      //       document.write("hey do while <br>");
+      //       a = a+1; //output: display (hey do while) 10 times.
+      //   }while(a <= 10);
+
+
+
+      /* 3. For loop: */
+      for (let a = 1; a <= 10; a++) {
+        document.write(a + ")" + " hey for loop <br>");
+      }
+
+      //another EXAMPLE:
+      for (x = 0; x < 5; x++) {
+        document.write(x + "<br>");
+      }
+
+      //next one (EXAMPLE):
+      const cars = ["BMW", "Volvo", "Saab", "Ford"]; //You can initiate many values in expression 1 (separated by comma):
+      let i, len, text;
+      for (i = 0, len = cars.length, text = ""; i < len; i++) {
+        text += cars[i] + "<br>";
+      }
+      document.getElementById("demo3").innerHTML = text;
+
+
+
+      /* IMPORTANT TOPIC LOOP SCOPE*/
+
+      // var i = 5; //OUTPUT: 10 (NO LOCAL SCOPE)
+      // for (var i = 0; i < 10; i++) {
+      //   // document.write(i +")" +"<br>");
+      // }
+      // document.getElementById("demo1").innerHTML = i;
+
+
+      // //SAME BUT USE LET VARIABLE:
+      // let i = 5; // OUTPUT: 5 (CAN HAVE LOCAL SCOPE)
+      // for (let i = 0; i < 10; i++) {
+      //   // document.write(i +")" +"<br>");
+      // }
+      // document.getElementById("demo2").innerHTML = i;
+
+
+
+      /* 4. FOR/IN LOOP*/
+      let obj = {
+        //OBJECT (for in statement loops through the properties of an Object:)
+        firstName: "john", //fName , lName etc. Property(key) & obj is return key value : john, Doe, 25)
+        lastName: "Doe",
+        age: 25,
+      };
+      for (let key in obj) {
+        document.write(key + " : " + obj[key] + "<br>"); //OUTPUT: John / Doe / 25
+      }
+
+
+      /* FOR IN OVER ARRAYS (loop over the properties of an Array:) */
+      const arr = [44, 50, 60, 100];
+
+      for (const key in arr) {
+        document.write(arr[key] + "<br>"); //OUTPUT: 44 / 50 / 60 / 100
+      }
+
+
+      /* 5. FOR-OF (Looping over a String)*/
+      let lang = "javascript";
+      for (let x of lang) {
+        document.write(x + "<br>"); //output: j / a / v / a...t
+      }
+
+
+      //Looping over an Array.
+      let car = ["BMW", "ALTO", "FORD"];
+
+      for (let key of car) {
+        document.write(key + "<br>"); //OUTPUT: BMW / ALTO / FORD.
+      }
+
+
+      /* 6. forEach()*/
+      const a = ["Rahul", "Abhi", "Karan"];
+
+      a.forEach(function (value, index) {
+        //FUNCTION CREATED INSIDE THE FOREACH().
+        document.write(index + " : " + value + "<br>"); //OUTPUT: 0: Rahul / 1: Abhi / 2: Karan. (same output in below code)
+      });
+
+      
+      /*ANOTHER WAY [ FUNCTION OUTSIDE THE forEach() ]*/
+      const name = ["aman", "virat", "sahil"];
+
+      name.forEach(myFunction); //call the created function in this statement.
+
+      function myFunction(value, index) {
+        //CREATE A FUNCTION. & (Value AND Index) called variable arguments.
+        document.write(index + " > " + value + "<br>");
+      }
+
+      
+    </script>
+  </body>
+</html>
